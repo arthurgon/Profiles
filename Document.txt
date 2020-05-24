@@ -1,0 +1,19 @@
+Testar o profile por command line:
+
+1. Rodar o Maven à fim de que um .jar seja gerado (mvn install)
+2. Rodar o comando abaixo setando o perfil desejado conforme configurado no arquivo Application.properties (-Dspring.profiles.active=test):
+C:\IDE\STS\Workspace\ConfigurationParameters> C:\Java\jdk1.8.0_181\bin\java.exe -jar -Dspring.profiles.active=test target\ConfigurationParameters-0.0.1-SNAPSHOT.jar
+
+Resultado:
+
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.0.RELEASE)
+
+2020-05-24 14:09:39.163  INFO 7092 --- [           main] c.t.a.ConfigurationParametersApplication : Starting ConfigurationParametersApplication v0.0.1-SNAPSHOT on NBBV023872 with PID 7092 (C:\IDE\STS\Workspace\ConfigurationParameters\target\ConfigurationParameters-0.0.1-SNAPSHOT.jar started by ARTHUR in C:\IDE\STS\Workspace\ConfigurationParameters)
+2020-05-24 14:09:39.167  INFO 7092 --- [           main] c.t.a.ConfigurationParametersApplication : The following profiles are active: test
+2020-05-24 14:09:39.828  INFO 7092 --- [           main] c.t.a.ConfigurationParametersApplication : Started ConfigurationParametersApplication in 1.126 seconds (JVM running for 1.595)
+### Quantidade de elementos por página = 100
