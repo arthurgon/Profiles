@@ -46,7 +46,7 @@ public class ConfigurationParametersApplication {
 			empresa.setRazaoSocial("GOMES SOLUÇÕES LTDA.");
 			empresa.setCnpj("14292944000171");
 			
-//			this.empresaRepository.save(empresa);
+			this.empresaRepository.save(empresa);
 			System.out.println("Gravou");
 			List<Empresa> empresas = empresaRepository.findAll();
 			empresas.forEach(System.out::println);
