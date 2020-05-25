@@ -21,8 +21,8 @@ public class ConfigurationParametersApplication {
 	@Value("${paginacao.qtd_por_pagina}")
 	private int qtdPorPagina;
 	
-	@Autowired
-	private EmpresaRepository empresaRepository;
+//	@Autowired
+//	private EmpresaRepository empresaRepository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(ConfigurationParametersApplication.class, args);
@@ -48,19 +48,19 @@ public class ConfigurationParametersApplication {
 			
 			//this.empresaRepository.save(empresa);
 			//System.out.println("Gravou");
-			List<Empresa> empresas = empresaRepository.findAll();
-			empresas.forEach(System.out::println);
+			//List<Empresa> empresas = empresaRepository.findAll();
+			//empresas.forEach(System.out::println);
 			
 //			Optional<Empresa> empresaDb = empresaRepository.findById(8L);
 //			System.out.println("Empresa por ID: " + empresaDb);
 
-			Empresa empresaCnpj = empresaRepository.findByCnpj("14292944000172");
-			System.out.println("Empresa por CNPJ: " + empresaCnpj);
+			//Empresa empresaCnpj = empresaRepository.findByCnpj("14292944000172");
+			//System.out.println("Empresa por CNPJ: " + empresaCnpj);
 			
 			//this.empresaRepository.deleteById(6L);
 			
-			empresas = empresaRepository.findAll();
-			System.out.println("Empresas: " + empresas.size());
+			//empresas = empresaRepository.findAll();
+			//System.out.println("Empresas: " + empresas.size());
 			
 		};
 	}
