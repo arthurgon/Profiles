@@ -30,13 +30,13 @@ public class Empresa implements Serializable{
 	private String cnpj;
 	private Date dataCriacao;
 	private Date dataAtualizacao;
-	private List<Funcionario> funcionarios;
+	//private List<Funcionario> funcionarios;
 
 	public Empresa() {
 	}
 
 	@Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
 	public Long getId() {
 		return id;
 	}
@@ -81,14 +81,14 @@ public class Empresa implements Serializable{
 		this.dataAtualizacao = dataAtualizacao;
 	}
 
-	@OneToMany(mappedBy = "empresa", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	public List<Funcionario> getFuncionarios() {
-		return funcionarios;
-	}
-
-	public void setFuncionarios(List<Funcionario> funcionarios) {
-		this.funcionarios = funcionarios;
-	}
+//	@OneToMany(mappedBy = "empresa", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//	public List<Funcionario> getFuncionarios() {
+//		return funcionarios;
+//	}
+//
+//	public void setFuncionarios(List<Funcionario> funcionarios) {
+//		this.funcionarios = funcionarios;
+//	}
 	
 	@PreUpdate
     public void preUpdate() {

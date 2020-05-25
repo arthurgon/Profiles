@@ -32,35 +32,33 @@ public class ConfigurationParametersApplication {
 		return args -> {
 					
 		    //Gera senha criptografada (hashing)
-			String senhaEncoded = PasswordUtils.gerarBCrypt("123456");
+			String senhaEncoded = PasswordUtils.gerarBCrypt("vivo360guides");
 			System.out.println("Senha encoded: " + senhaEncoded);	
 			//Gera a mesma senha criptografada (novo hashing)
-			senhaEncoded = PasswordUtils.gerarBCrypt("123456");
+			senhaEncoded = PasswordUtils.gerarBCrypt("vivo360guides");
 			System.out.println("Senha encoded novamente: " + senhaEncoded);	
 			//Valida o hashing
-			System.out.println("Senha válida: " + PasswordUtils.senhaValida("123456", senhaEncoded));
+			System.out.println("Senha válida: " + PasswordUtils.senhaValida("vivo360guides", senhaEncoded));
 		
 			System.out.println("### Quantidade de elementos por página = " + this.qtdPorPagina);
 			
 			Empresa empresa = new Empresa();
-			empresa.setRazaoSocial("Kazale IT");
-			empresa.setCnpj("74645215000104");
+			empresa.setRazaoSocial("GOMES SOLUÇÕES LTDA.");
+			empresa.setCnpj("14292944000171");
 			
-			this.empresaRepository.save(empresa);
+//			this.empresaRepository.save(empresa);
 			System.out.println("Gravou");
 			List<Empresa> empresas = empresaRepository.findAll();
 			empresas.forEach(System.out::println);
 			
-			Optional<Empresa> empresaDb = empresaRepository.findById(1L);
+			Optional<Empresa> empresaDb = empresaRepository.findById(7L);
 			System.out.println("Empresa por ID: " + empresaDb);
-			
-			empresa.setRazaoSocial("Kazale IT Web");
-			this.empresaRepository.save(empresa);
 
-			Empresa empresaCnpj = empresaRepository.findByCnpj("74645215000104");
+			Empresa empresaCnpj = empresaRepository.findByCnpj("14292944000171");
 			System.out.println("Empresa por CNPJ: " + empresaCnpj);
 			
-			this.empresaRepository.deleteById(1L);
+			//this.empresaRepository.deleteById(6L);
+			
 			empresas = empresaRepository.findAll();
 			System.out.println("Empresas: " + empresas.size());
 			

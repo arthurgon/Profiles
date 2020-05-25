@@ -61,17 +61,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<!-- 
-			<plugin>
-                <groupId>org.flywaydb</groupId>
-                <artifactId>flyway-maven-plugin</artifactId>
-                <configuration>
-                    <url>jdbc:h2:mem/flyway</url>
-                    <user>sa</user>
-                    <password/>
-                </configuration>
-            </plugin>
-           -->
 		</plugins>
 	</build>
 </project>
