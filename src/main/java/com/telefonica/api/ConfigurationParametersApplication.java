@@ -43,18 +43,18 @@ public class ConfigurationParametersApplication {
 			System.out.println("### Quantidade de elementos por página = " + this.qtdPorPagina);
 			
 			Empresa empresa = new Empresa();
-			empresa.setRazaoSocial("GOMES SOLUÇÕES LTDA.");
-			empresa.setCnpj("14292944000171");
+			empresa.setRazaoSocial("TOMAS SOLUÇÕES LTDA.");
+			empresa.setCnpj("14292944000172");
 			
-			this.empresaRepository.save(empresa);
-			System.out.println("Gravou");
+			//this.empresaRepository.save(empresa);
+			//System.out.println("Gravou");
 			List<Empresa> empresas = empresaRepository.findAll();
 			empresas.forEach(System.out::println);
 			
-			Optional<Empresa> empresaDb = empresaRepository.findById(7L);
-			System.out.println("Empresa por ID: " + empresaDb);
+//			Optional<Empresa> empresaDb = empresaRepository.findById(8L);
+//			System.out.println("Empresa por ID: " + empresaDb);
 
-			Empresa empresaCnpj = empresaRepository.findByCnpj("14292944000171");
+			Empresa empresaCnpj = empresaRepository.findByCnpj("14292944000172");
 			System.out.println("Empresa por CNPJ: " + empresaCnpj);
 			
 			//this.empresaRepository.deleteById(6L);
